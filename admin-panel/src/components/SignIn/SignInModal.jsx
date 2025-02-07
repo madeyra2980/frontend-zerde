@@ -24,8 +24,10 @@ const SignInModal = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify({ email, password }),
       });
+      
 
       if (!response.ok) {
         throw new Error("Ошибка при входе. Проверьте данные.");
